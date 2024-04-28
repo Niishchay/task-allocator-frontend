@@ -1,0 +1,16 @@
+@import '../../styles.scss'; 
+
+mat-card-header{
+    margin-bottom: 25px;
+    padding-bottom: 16px;
+    background-color: $primary-color;
+    color: white;
+}
+
+mat-card-content{
+    margin: 10px;
+}
+
+mat-form-field{
+    display: block;
+}

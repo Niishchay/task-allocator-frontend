@@ -1,0 +1,35 @@
+<div class="card-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Create task</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="taskFormGroup" (ngSubmit)="submit()">
+                <mat-form-field appearance="outline">
+                    <mat-label> Task Title </mat-label>
+                    <input matInput formControlName="title" type="text" placeholder="Enter title"/>
+                </mat-form-field>
+                <mat-form-field  appearance="outline">
+                    <mat-label> Priority </mat-label>
+                    <mat-select formControlName="priority">
+                        <mat-option *ngFor="let priority of priorityValues" [value]="priority">{{priority}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field  appearance="outline">
+                    <mat-label> Status </mat-label>
+                    <mat-select formControlName="status">
+                        <mat-option *ngFor="let status of statusValues" [value]="status">{{status}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-dialog-actions align="center">
+                    <button mat-raised-button color="warn" (click)="closePopup()">
+                        Cancel
+                    </button>
+                    <button mat-raised-button color="primary" type="submit">
+                        Submit
+                    </button>
+                </mat-dialog-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

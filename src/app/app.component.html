@@ -1,0 +1,43 @@
+<app-spinner *ngIf="showSpinner"></app-spinner>
+<app-navbar></app-navbar>
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="isDrawerOpened" >
+    <mat-list *ngIf="!isRoleLead"> 
+      <mat-list-item routerLink="/user"
+        >Request Task
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item routerLink="./requested-task" 
+        >Requested Tasks
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item routerLink="./task-list" 
+      >Task list
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    </mat-list>
+    <mat-list *ngIf="isRoleLead"> 
+      <mat-list-item routerLink="/admin"
+        >Task Requests
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item routerLink="./create-task" 
+        >Create Task
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item routerLink="./users" 
+      >Users
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,19 @@
+.spacer{
+    flex: 1;
+}
+
+mat-select{
+    // margin-top: 2px;
+    margin-left: 10px;
+    width: auto;
+    color: black;
+    font-weight: 500;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: small;
+    ::ng-deep .mat-mdc-select-arrow-wrapper{
+        margin-left: 5px;
+    }
+}
+

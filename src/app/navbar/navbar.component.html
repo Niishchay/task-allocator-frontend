@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <span>Task Allocator</span>
+    <span class="spacer"></span>
+    <span *ngIf="username">Welcome! {{ capitalize(username) }}</span>
+    <mat-select *ngIf="status" [(ngModel)]="status" (selectionChange)="onChange($event)" panelWidth="">
+        <mat-option *ngFor="let status of userStatus" [value]="status">{{status}}</mat-option>
+    </mat-select>
+    <button mat-icon-button *ngIf="username" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

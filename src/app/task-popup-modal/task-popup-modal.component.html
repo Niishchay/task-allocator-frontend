@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Select Task</h2>
+<mat-dialog-content>
+    <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let task of tasks" [value]="task" (click)="selectedTask = task"> {{capitalize(task.title)}} | priority: {{ task.priority}} </mat-list-option>
+    </mat-selection-list>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-raised-button color="warn" mat-dialog-close> Close </button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="selectedTask"> Assign </button>
+</mat-dialog-actions>

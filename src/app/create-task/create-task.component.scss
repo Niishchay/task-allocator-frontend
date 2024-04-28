@@ -1,0 +1,40 @@
+@import '../../styles.scss'; 
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+mat-card{
+    margin: 20px;
+
+    mat-card-header{
+        background-color: $primary-color;
+        color: white;
+
+        mat-form-field{
+            width: 100%;
+
+            ::ng-deep .mdc-text-field--filled {
+                background-color: white;
+            }   
+        }
+    }
+}
+
+::ng-deep .mdc-list-item__primary-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.create-button{
+    width: 15vw;
+    height: 5vh;
+}

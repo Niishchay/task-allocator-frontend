@@ -1,0 +1,28 @@
+@import '../../styles.scss'; 
+
+mat-card{
+    margin: 20px;
+
+    mat-card-header{
+        background-color: $primary-color;
+        color: white;
+
+        mat-form-field{
+            width: 100%;
+
+            ::ng-deep .mdc-text-field--filled {
+                background-color: white;
+            }   
+        }
+    }
+}
+
+::ng-deep .mdc-list-item__primary-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-align{
+    text-align: center;
+}
